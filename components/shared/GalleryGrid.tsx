@@ -80,14 +80,23 @@ export default function GalleryGrid({ items }: Props) {
             {videos.map((item) => (
               <div key={item._id} className="rounded-xl overflow-hidden border border-gray-200">
                 {item.videoUrl && (
-                  <div className="aspect-video">
-                    <iframe
-                      src={item.videoUrl.replace('watch?v=', 'embed/')}
-                      title={item.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
+                  <div className="aspect-video bg-black">
+                    {item.videoUrl.includes('cdn.sanity.io') ? (
+                      <video
+                        src={item.videoUrl}
+                        controls
+                        preload="metadata"
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <iframe
+                        src={item.videoUrl.includes('youtube.com/watch') ? item.videoUrl.replace('watch?v=', 'embed/') : item.videoUrl}
+                        title={item.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    )}
                   </div>
                 )}
                 <div className="p-3">
