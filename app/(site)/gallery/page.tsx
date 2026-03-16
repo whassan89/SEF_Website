@@ -3,6 +3,8 @@ import PageHero from '@/components/shared/PageHero'
 import GalleryGrid from '@/components/shared/GalleryGrid'
 import { getGalleryItems } from '@/sanity/lib/queries'
 
+export const revalidate = 60 // refetch from Sanity every 60 seconds
+
 export const metadata: Metadata = {
   title: 'Gallery',
   description: 'Photos and videos from SEF field activities — food distribution, clothing drives, medical camps, and livelihood programs across Punjab.',

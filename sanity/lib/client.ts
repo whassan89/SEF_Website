@@ -4,5 +4,5 @@ export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
   apiVersion: '2026-03-14',
-  useCdn: true, // false in Studio / on-demand revalidation
+  useCdn: false, // always fetch fresh data from Sanity API
 })
