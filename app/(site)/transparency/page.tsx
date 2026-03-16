@@ -50,11 +50,20 @@ export default function TransparencyPage() {
             <div className="bg-amber-50 rounded-2xl p-8 border border-amber-100">
               <Shield className="w-10 h-10 text-amber-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Punjab Charity Commission</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                SEF is registered with the Punjab Charity Commission, which authorizes us to legally
-                collect and apply charitable donations for approved social welfare activities across Punjab.
-                All our financial activities are subject to PCC oversight and compliance.
-              </p>
+              <dl className="space-y-2 text-sm">
+                {[
+                  ['Authority', 'Government of the Punjab'],
+                  ['Registration No.', 'PB-9550265667301809'],
+                  ['Category', 'Category A Charity'],
+                  ['Registered', '12-Dec-2025'],
+                  ['Valid Until', '11-Dec-2026'],
+                ].map(([label, value]) => (
+                  <div key={label} className="flex justify-between gap-4">
+                    <dt className="text-gray-500">{label}:</dt>
+                    <dd className="font-semibold text-gray-900 text-right">{value}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </div>

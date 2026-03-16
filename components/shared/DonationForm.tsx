@@ -159,11 +159,11 @@ export default function DonationForm() {
             <div className="bg-gray-50 rounded-xl p-4 text-sm border border-gray-200 space-y-1.5">
               <p className="font-semibold text-gray-900 mb-2">Bank Transfer Details</p>
               {[
-                ['Bank', 'To be updated'],
+                ['Bank', 'United Bank Limited (UBL)'],
                 ['Account Title', 'Safia Empowerment Foundation'],
-                ['Account No.', 'To be updated'],
-                ['IBAN', 'To be updated'],
-                ['Branch', 'Lahore, Punjab'],
+                ['Account No.', '348602382'],
+                ['IBAN', 'PK87UNIL0109000348602382'],
+                ['Branch', 'Wapda Town, Lahore (Code: 1346)'],
               ].map(([label, value]) => (
                 <div key={label} className="flex justify-between">
                   <span className="text-gray-500">{label}:</span>

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 }
 
 const contactInfo = [
-  { icon: MapPin, label: 'Office Address', value: 'Lahore, Punjab, Pakistan' },
-  { icon: Phone, label: 'Phone / WhatsApp', value: '+92 300 000 0000', href: 'tel:+923000000000' },
-  { icon: Mail, label: 'General Inquiries', value: 'info@sefngo.com', href: 'mailto:info@sefngo.com' },
-  { icon: Mail, label: 'Donations', value: 'donate@sefngo.com', href: 'mailto:donate@sefngo.com' },
-  { icon: Mail, label: 'Media / Press', value: 'media@sefngo.com', href: 'mailto:media@sefngo.com' },
+  { icon: MapPin, label: 'Office Address', value: 'Office No. 7, First Floor, Al Rehman Arcade, 242 C Block, PIA Road, Johar Town, Lahore' },
+  { icon: Phone, label: 'Phone / WhatsApp', value: '+92 314 4782395', href: 'tel:+923144782395' },
+  { icon: Mail, label: 'General Inquiries', value: 'safia.empowerment@gmail.com', href: 'mailto:safia.empowerment@gmail.com' },
+  { icon: Mail, label: 'Donations', value: 'safia.empowerment@gmail.com', href: 'mailto:safia.empowerment@gmail.com' },
+  { icon: Mail, label: 'Media / Press', value: 'safia.empowerment@gmail.com', href: 'mailto:safia.empowerment@gmail.com' },
   { icon: Clock, label: 'Office Hours', value: 'Mon–Sat: 9 AM – 6 PM PKT' },
 ]
 

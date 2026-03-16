@@ -97,18 +97,18 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-green-200 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-400" />
-                Lahore, Punjab, Pakistan
+                Office No. 7, First Floor, Al Rehman Arcade, 242 C Block, PIA Road, Johar Town, Lahore
               </li>
               <li>
-                <a href="mailto:info@sefngo.com" className="flex items-center gap-2 text-green-200 hover:text-amber-400 text-sm transition-colors">
+                <a href="mailto:safia.empowerment@gmail.com" className="flex items-center gap-2 text-green-200 hover:text-amber-400 text-sm transition-colors">
                   <Mail className="w-4 h-4 flex-shrink-0 text-amber-400" />
-                  info@sefngo.com
+                  safia.empowerment@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+923000000000" className="flex items-center gap-2 text-green-200 hover:text-amber-400 text-sm transition-colors">
+                <a href="tel:+923144782395" className="flex items-center gap-2 text-green-200 hover:text-amber-400 text-sm transition-colors">
                   <Phone className="w-4 h-4 flex-shrink-0 text-amber-400" />
-                  +92 300 000 0000
+                  +92 314 4782395
                 </a>
               </li>
             </ul>
