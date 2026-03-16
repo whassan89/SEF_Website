@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const contactInfo = [
   { icon: MapPin, label: 'Office Address', value: 'Office No. 7, First Floor, Al Rehman Arcade, 242 C Block, PIA Road, Johar Town, Lahore' },
   { icon: Phone, label: 'Phone / WhatsApp', value: '+92 314 4782395', href: 'tel:+923144782395' },
+  { icon: Phone, label: 'Phone / WhatsApp', value: '+92 332 4452894', href: 'tel:+923324452894' },
   { icon: Mail, label: 'General Inquiries', value: 'safia.empowerment@gmail.com', href: 'mailto:safia.empowerment@gmail.com' },
   { icon: Mail, label: 'Donations', value: 'safia.empowerment@gmail.com', href: 'mailto:safia.empowerment@gmail.com' },
   { icon: Mail, label: 'Media / Press', value: 'safia.empowerment@gmail.com', href: 'mailto:safia.empowerment@gmail.com' },

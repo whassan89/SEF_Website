@@ -111,6 +111,12 @@ export default function Footer() {
                   +92 314 4782395
                 </a>
               </li>
+              <li>
+                <a href="tel:+923324452894" className="flex items-center gap-2 text-green-200 hover:text-amber-400 text-sm transition-colors">
+                  <Phone className="w-4 h-4 flex-shrink-0 text-amber-400" />
+                  +92 332 4452894
+                </a>
+              </li>
             </ul>
           </div>
         </div>
