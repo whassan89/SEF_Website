@@ -37,11 +37,11 @@ export default function ContactPage() {
               <div className="space-y-4 mb-8">
                 {contactInfo.map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex gap-4 bg-white rounded-xl p-4 border border-gray-100">
-                    <Icon className="w-5 h-5 text-green-700 flex-shrink-0 mt-0.5" />
+                    <Icon className="w-5 h-5 text-primary-dark flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{label}</p>
                       {href ? (
-                        <a href={href} className="font-medium text-gray-900 hover:text-green-700 transition-colors">
+                        <a href={href} className="font-medium text-gray-900 hover:text-primary-dark transition-colors">
                           {value}
                         </a>
                       ) : (
@@ -53,9 +53,9 @@ export default function ContactPage() {
               </div>
 
               {/* Map placeholder */}
-              <div className="rounded-2xl overflow-hidden border border-gray-200 h-56 bg-green-50 flex items-center justify-center text-gray-400">
+              <div className="rounded-2xl overflow-hidden border border-gray-200 h-56 bg-primary-subtle flex items-center justify-center text-gray-400">
                 <div className="text-center">
-                  <MapPin className="w-10 h-10 mx-auto mb-2 text-green-300" />
+                  <MapPin className="w-10 h-10 mx-auto mb-2 text-primary-light" />
                   <p className="text-sm">Map embed — add Google Maps API key</p>
                 </div>
               </div>

@@ -23,20 +23,20 @@ export default async function TestimonialsSection() {
   const displayTestimonials = testimonials.length > 0 ? testimonials : fallbackTestimonials
 
   return (
-    <section className="py-16 bg-green-800 text-white">
+    <section className="py-16 bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Stories of Change</h2>
-          <p className="text-green-200 max-w-xl mx-auto">
+          <p className="text-primary-pale max-w-xl mx-auto">
             Real words from the people whose lives SEF has touched.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {displayTestimonials.map((t) => (
-            <div key={t._id} className="bg-green-700/50 rounded-2xl p-6 border border-green-600/30">
-              <Quote className="w-8 h-8 text-amber-400 mb-4" />
-              <p className="text-green-100 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
+            <div key={t._id} className="bg-primary-dark/50 rounded-2xl p-6 border border-primary-medium/30">
+              <Quote className="w-8 h-8 text-accent-medium mb-4" />
+              <p className="text-primary-muted leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
               <div className="flex items-center gap-3">
                 {t.photo ? (
                   <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
@@ -48,13 +48,13 @@ export default async function TestimonialsSection() {
                     />
                   </div>
                 ) : (
-                  <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                  <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
                     {t.beneficiaryName.charAt(0)}
                   </div>
                 )}
                 <div>
                   <p className="font-semibold text-white text-sm">{t.beneficiaryName}</p>
-                  <p className="text-xs text-green-300">SEF Beneficiary</p>
+                  <p className="text-xs text-primary-light">SEF Beneficiary</p>
                 </div>
               </div>
             </div>

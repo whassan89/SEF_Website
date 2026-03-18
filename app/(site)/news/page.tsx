@@ -22,8 +22,8 @@ const CATEGORY_LABELS: Record<string, string> = {
 const CATEGORY_COLORS: Record<string, string> = {
   'news': 'bg-blue-50 text-blue-700',
   'events': 'bg-purple-50 text-purple-700',
-  'impact-stories': 'bg-green-50 text-green-700',
-  'announcements': 'bg-amber-50 text-amber-700',
+  'impact-stories': 'bg-primary-subtle text-primary-dark',
+  'announcements': 'bg-accent-subtle text-accent-deep',
   'press-releases': 'bg-gray-100 text-gray-700',
 }
 
@@ -72,13 +72,13 @@ export default async function NewsPage() {
                         })}
                       </span>
                     </div>
-                    <h2 className="font-bold text-gray-900 mb-2 group-hover:text-green-800 transition-colors line-clamp-2">
+                    <h2 className="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {post.title}
                     </h2>
                     <p className="text-sm text-gray-500 line-clamp-3 mb-4">{post.excerpt}</p>
                     <Link
                       href={`/news/${post.slug.current}`}
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-green-700 hover:gap-2 transition-all"
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-primary-dark hover:gap-2 transition-all"
                     >
                       Read More <ArrowRight className="w-4 h-4" />
                     </Link>

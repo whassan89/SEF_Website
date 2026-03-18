@@ -42,7 +42,7 @@ export default async function PostPage({ params }: Props) {
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
         {/* Back link */}
-        <Link href="/news" className="inline-flex items-center gap-1 text-sm text-green-700 font-medium hover:gap-2 transition-all mb-6">
+        <Link href="/news" className="inline-flex items-center gap-1 text-sm text-primary-dark font-medium hover:gap-2 transition-all mb-6">
           <ArrowLeft className="w-4 h-4" /> Back to News
         </Link>
 
@@ -60,11 +60,11 @@ export default async function PostPage({ params }: Props) {
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">{post.title}</h1>
-        <p className="text-lg text-gray-500 mb-8 leading-relaxed border-l-4 border-green-600 pl-4">{post.excerpt}</p>
+        <p className="text-lg text-gray-500 mb-8 leading-relaxed border-l-4 border-primary-medium pl-4">{post.excerpt}</p>
 
         {/* Body */}
         {post.body && (
-          <div className="prose prose-gray prose-green max-w-none prose-headings:font-bold prose-a:text-green-700 prose-img:rounded-xl">
+          <div className="prose prose-gray prose-green max-w-none prose-headings:font-bold prose-a:text-primary-dark prose-img:rounded-xl">
             <PortableText
               value={post.body}
               components={{
@@ -105,7 +105,7 @@ export default async function PostPage({ params }: Props) {
               href={`https://wa.me/?text=${encodeURIComponent(`${post.title} https://sefngo.com/news/${post.slug.current}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-lg hover:bg-green-600 transition-colors"
+              className="px-4 py-2 bg-primary-medium text-white text-sm font-semibold rounded-lg hover:bg-primary-medium transition-colors"
             >
               WhatsApp
             </a>

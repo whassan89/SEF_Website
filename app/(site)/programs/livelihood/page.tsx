@@ -46,8 +46,8 @@ export default function LivelihoodPage() {
           <SectionTitle title="Livelihood Pathways" subtitle="We match each person with the most suitable pathway based on their abilities." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {livelihoods.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="bg-green-50 rounded-2xl p-6 text-center border border-green-100">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-800 mb-4">
+              <div key={title} className="bg-primary-subtle rounded-2xl p-6 text-center border border-primary-muted">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary mb-4">
                   <Icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
@@ -58,7 +58,7 @@ export default function LivelihoodPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-green-800 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="How You Can Help" subtitle="Sponsor a livelihood kit and change someone's life permanently." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
@@ -68,13 +68,13 @@ export default function LivelihoodPage() {
               { amount: 'Rs. 25,000', desc: 'Full livelihood package with 3 months mentorship' },
             ].map(({ amount, desc }) => (
               <div key={amount} className="bg-white/10 border border-white/20 rounded-xl p-5 text-center">
-                <p className="text-2xl font-bold text-amber-400">{amount}</p>
-                <p className="text-sm text-green-200 mt-1">{desc}</p>
+                <p className="text-2xl font-bold text-accent-medium">{amount}</p>
+                <p className="text-sm text-primary-pale mt-1">{desc}</p>
               </div>
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/donate" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-xl transition-colors">
+            <Link href="/donate" className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-8 py-3 rounded-xl transition-colors">
               <Heart className="w-5 h-5" fill="white" /> Sponsor a Livelihood Kit
             </Link>
             <Link href="/volunteer" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-3 rounded-xl transition-colors">

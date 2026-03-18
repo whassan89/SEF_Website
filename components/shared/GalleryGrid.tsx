@@ -35,8 +35,8 @@ export default function GalleryGrid({ items }: Props) {
             onClick={() => setFilter(value)}
             className={`px-4 py-2 rounded-full text-sm font-semibold border transition-colors ${
               filter === value
-                ? 'bg-green-800 text-white border-green-800'
-                : 'border-gray-300 text-gray-600 hover:border-green-500 hover:text-green-800'
+                ? 'bg-primary text-white border-primary'
+                : 'border-gray-300 text-gray-600 hover:border-primary-medium hover:text-primary'
             }`}
           >
             {label}

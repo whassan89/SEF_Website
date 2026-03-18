@@ -45,7 +45,7 @@ export default function DonationForm() {
             onClick={() => setDonationType(type)}
             className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-colors capitalize ${
               donationType === type
-                ? 'bg-white shadow text-green-800 border border-gray-200'
+                ? 'bg-white shadow text-primary border border-gray-200'
                 : 'text-gray-500 hover:text-gray-700'
             }`}
           >
@@ -65,8 +65,8 @@ export default function DonationForm() {
                 onClick={() => { setSelectedAmount(amount); setCustomAmount('') }}
                 className={`py-2.5 rounded-lg text-sm font-bold border transition-colors ${
                   selectedAmount === amount
-                    ? 'bg-green-800 text-white border-green-800'
-                    : 'border-gray-200 text-gray-700 hover:border-green-400 hover:text-green-800'
+                    ? 'bg-primary text-white border-primary'
+                    : 'border-gray-200 text-gray-700 hover:border-primary-light hover:text-primary'
                 }`}
               >
                 Rs. {amount.toLocaleString()}
@@ -77,11 +77,11 @@ export default function DonationForm() {
               placeholder="Custom"
               value={customAmount}
               onChange={(e) => { setCustomAmount(e.target.value); setSelectedAmount(null) }}
-              className="py-2.5 px-3 rounded-lg text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="py-2.5 px-3 rounded-lg text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary-medium focus:border-transparent"
             />
           </div>
           {finalAmount > 0 && (
-            <p className="text-xs text-green-700 font-medium">
+            <p className="text-xs text-primary-dark font-medium">
               Rs. {finalAmount.toLocaleString()} — {finalAmount >= 10000 ? 'sponsors a full distribution event' : finalAmount >= 2500 ? 'feeds a family for a week' : finalAmount >= 500 ? 'feeds a family for a day' : 'makes a real difference'}
             </p>
           )}
@@ -93,7 +93,7 @@ export default function DonationForm() {
           <select
             value={cause}
             onChange={(e) => setCause(e.target.value)}
-            className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-medium"
           >
             {CAUSES.map((c) => (
               <option key={c.value} value={c.value}>{c.label}</option>
@@ -110,7 +110,7 @@ export default function DonationForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your full name"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-medium"
             />
           </div>
           <div>
@@ -120,7 +120,7 @@ export default function DonationForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-medium"
             />
           </div>
           <div className="sm:col-span-2">
@@ -130,7 +130,7 @@ export default function DonationForm() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="+92 3XX XXXXXXX"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-medium"
             />
           </div>
         </div>
@@ -145,8 +145,8 @@ export default function DonationForm() {
                 onClick={() => setPaymentMethod(id)}
                 className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold border transition-colors ${
                   paymentMethod === id
-                    ? 'bg-green-800 text-white border-green-800'
-                    : 'border-gray-200 text-gray-600 hover:border-green-400'
+                    ? 'bg-primary text-white border-primary'
+                    : 'border-gray-200 text-gray-600 hover:border-primary-light'
                 }`}
               >
                 {icon} {label}
@@ -182,7 +182,7 @@ export default function DonationForm() {
           )}
 
           {paymentMethod === 'easypaisa' && (
-            <div className="bg-green-50 rounded-xl p-4 text-sm border border-green-100">
+            <div className="bg-primary-subtle rounded-xl p-4 text-sm border border-primary-muted">
               <p className="font-semibold text-gray-900 mb-1">EasyPaisa Payment</p>
               <p className="text-gray-500">EasyPaisa merchant integration coming soon. Please use Bank Transfer or PayPro (Card) for now.</p>
             </div>
@@ -200,7 +200,7 @@ export default function DonationForm() {
         {(paymentMethod === 'paypro') && (
           <button
             disabled={!finalAmount || !name || !email}
-            className="w-full flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-lg transition-colors"
+            className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-lg transition-colors"
           >
             <Heart className="w-5 h-5" fill="white" />
             Donate Rs. {finalAmount ? finalAmount.toLocaleString() : '—'} Now

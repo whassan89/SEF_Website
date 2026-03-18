@@ -19,7 +19,7 @@ export default async function ImpactStats() {
           {displayStats.map((stat) => (
             <div key={stat._id} className="text-center">
               <div className="text-4xl mb-2">{stat.icon}</div>
-              <div className="text-3xl sm:text-4xl font-bold text-green-800">
+              <div className="text-3xl sm:text-4xl font-bold text-primary">
                 {stat.value.toLocaleString()}
                 {stat.suffix}
               </div>

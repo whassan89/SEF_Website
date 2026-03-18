@@ -78,7 +78,7 @@ export default async function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-green-50 rounded-2xl p-8 border border-green-100">
+            <div className="bg-primary-subtle rounded-2xl p-8 border border-primary-muted">
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { label: 'Founded', value: '2025' },
@@ -87,7 +87,7 @@ export default async function AboutPage() {
                   { label: 'PCC Registered', value: 'Yes' },
                 ].map(({ label, value }) => (
                   <div key={label} className="text-center">
-                    <p className="text-3xl font-bold text-green-800">{value}</p>
+                    <p className="text-3xl font-bold text-primary">{value}</p>
                     <p className="text-sm text-gray-500 mt-1">{label}</p>
                   </div>
                 ))}
@@ -102,16 +102,16 @@ export default async function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="Mission & Vision" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-green-800 text-white rounded-2xl p-8">
-              <h3 className="text-xl font-bold mb-4 text-amber-400">Our Mission</h3>
-              <p className="text-green-100 leading-relaxed">
+            <div className="bg-primary text-white rounded-2xl p-8">
+              <h3 className="text-xl font-bold mb-4 text-accent-medium">Our Mission</h3>
+              <p className="text-primary-muted leading-relaxed">
                 To provide immediate relief — food, clothing, and medical assistance — and long-term
                 empowerment through livelihood opportunities, to homeless individuals across Punjab, Pakistan.
               </p>
             </div>
-            <div className="bg-amber-500 text-white rounded-2xl p-8">
+            <div className="bg-accent text-white rounded-2xl p-8">
               <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-              <p className="text-amber-50 leading-relaxed">
+              <p className="text-accent-subtle leading-relaxed">
                 A Punjab where no person lives without dignity, access to basic necessities, or the
                 opportunity to contribute meaningfully to society.
               </p>
@@ -130,10 +130,10 @@ export default async function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {approach.map(({ step, icon: Icon, title, desc }) => (
               <div key={step} className="text-center relative">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
-                  <Icon className="w-8 h-8 text-green-800" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-muted mb-4">
+                  <Icon className="w-8 h-8 text-primary" />
                 </div>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 text-xs font-bold text-green-300">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 text-xs font-bold text-primary-light">
                   {step}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
@@ -150,13 +150,13 @@ export default async function AboutPage() {
           <SectionTitle title="Our Journey" subtitle="Key milestones in the growth of SEF." />
           <div className="max-w-2xl mx-auto">
             <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-px bg-green-200" />
+              <div className="absolute left-4 top-0 bottom-0 w-px bg-primary-pale" />
               <div className="space-y-8">
                 {milestones.map((m, i) => (
                   <div key={i} className="flex gap-6 relative">
-                    <div className="w-8 h-8 rounded-full bg-green-800 border-4 border-white shadow flex-shrink-0 z-10" />
+                    <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow flex-shrink-0 z-10" />
                     <div className="pb-2">
-                      <p className="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-0.5">
+                      <p className="text-xs font-semibold text-accent-dark uppercase tracking-wider mb-0.5">
                         {m.date}
                       </p>
                       <h4 className="font-bold text-gray-900">{m.title}</h4>
@@ -178,7 +178,7 @@ export default async function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {team.map((member) => (
                 <div key={member._id} className="text-center">
-                  <div className="relative w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 bg-green-100">
+                  <div className="relative w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 bg-primary-muted">
                     {member.photo ? (
                       <Image
                         src={urlFor(member.photo).width(200).height(200).url()}
@@ -187,13 +187,13 @@ export default async function AboutPage() {
                         className="object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-3xl font-bold text-green-600">
+                      <div className="w-full h-full flex items-center justify-center text-3xl font-bold text-primary-medium">
                         {member.name.charAt(0)}
                       </div>
                     )}
                   </div>
                   <h3 className="font-bold text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-green-700 font-medium">{member.role}</p>
+                  <p className="text-sm text-primary-dark font-medium">{member.role}</p>
                   {member.bio && <p className="text-xs text-gray-500 mt-2 leading-relaxed">{member.bio}</p>}
                 </div>
               ))}
@@ -203,31 +203,31 @@ export default async function AboutPage() {
       )}
 
       {/* Legal & Licenses */}
-      <section id="licenses" className="py-16 bg-green-800 text-white">
+      <section id="licenses" className="py-16 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="Legal Registration & Licenses" subtitle="SEF operates with full legal accountability." />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-              <Award className="w-10 h-10 text-amber-400 mb-4" />
+              <Award className="w-10 h-10 text-accent-medium mb-4" />
               <h3 className="text-xl font-bold mb-2">SECP License</h3>
-              <p className="text-green-200 text-sm leading-relaxed mb-3">
+              <p className="text-primary-pale text-sm leading-relaxed mb-3">
                 Licensed under <strong className="text-white">Section 42 of the Companies Act, 2017</strong> by
                 the Securities and Exchange Commission of Pakistan (SECP) in April 2025. Registered as a public
                 company in May 2025.
               </p>
-              <p className="text-xs text-green-300">
+              <p className="text-xs text-primary-light">
                 This license authorizes SEF to operate as a non-profit public company for social welfare purposes.
               </p>
             </div>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-              <FileText className="w-10 h-10 text-amber-400 mb-4" />
+              <FileText className="w-10 h-10 text-accent-medium mb-4" />
               <h3 className="text-xl font-bold mb-2">Punjab Charity Commission</h3>
-              <p className="text-green-200 text-sm leading-relaxed mb-3">
+              <p className="text-primary-pale text-sm leading-relaxed mb-3">
                 Registered with the <strong className="text-white">Punjab Charity Commission</strong>, which
                 authorizes SEF to collect and apply charitable donations for approved social work activities
                 across Punjab.
               </p>
-              <p className="text-xs text-green-300">
+              <p className="text-xs text-primary-light">
                 Your donations are legally protected and fully accounted for under PCC regulations.
               </p>
             </div>
@@ -235,7 +235,7 @@ export default async function AboutPage() {
           <div className="text-center mt-10">
             <Link
               href="/transparency"
-              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
             >
               View Full Transparency Report
             </Link>

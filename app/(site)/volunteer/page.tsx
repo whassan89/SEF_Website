@@ -34,8 +34,8 @@ export default function VolunteerPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {roles.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-green-100 mb-4">
-                  <Icon className="w-6 h-6 text-green-800" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary-muted mb-4">
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>

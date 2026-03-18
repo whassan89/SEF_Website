@@ -53,16 +53,16 @@ export default async function ProgramsPreview() {
             <Link
               key={program._id}
               href={`/programs/${program.slug.current}`}
-              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-gray-100 hover:border-green-200 transition-all"
+              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-gray-100 hover:border-primary-pale transition-all"
             >
               <div className="text-4xl mb-4">{program.icon}</div>
-              <h3 className="font-bold text-gray-900 mb-2 group-hover:text-green-800 transition-colors">
+              <h3 className="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                 {program.name}
               </h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-4">
                 {program.shortDescription}
               </p>
-              <span className="inline-flex items-center gap-1 text-sm font-semibold text-green-700 group-hover:gap-2 transition-all">
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary-dark group-hover:gap-2 transition-all">
                 Learn More <ArrowRight className="w-4 h-4" />
               </span>
             </Link>

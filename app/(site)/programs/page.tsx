@@ -38,7 +38,7 @@ export default async function ProgramsPage() {
               <Link
                 key={program._id}
                 href={`/programs/${program.slug.current}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-green-300 hover:shadow-lg transition-all"
+                className="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary-light hover:shadow-lg transition-all"
               >
                 {program.featuredImage ? (
                   <div className="relative h-52 overflow-hidden">
@@ -50,16 +50,16 @@ export default async function ProgramsPage() {
                     />
                   </div>
                 ) : (
-                  <div className="h-52 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center text-7xl">
+                  <div className="h-52 bg-gradient-to-br from-primary-muted to-primary-subtle flex items-center justify-center text-7xl">
                     {program.icon}
                   </div>
                 )}
                 <div className="p-6">
-                  <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-800 transition-colors">
+                  <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                     {program.name}
                   </h2>
                   <p className="text-gray-500 text-sm leading-relaxed mb-4">{program.shortDescription}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-green-700 group-hover:gap-2 transition-all">
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary-dark group-hover:gap-2 transition-all">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>

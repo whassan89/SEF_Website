@@ -30,11 +30,11 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-9 h-9 rounded-full bg-green-800 flex items-center justify-center">
+            <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
               <Heart className="w-5 h-5 text-white" fill="white" />
             </div>
             <div className="leading-tight">
-              <p className="font-bold text-green-800 text-sm">Safia Empowerment</p>
+              <p className="font-bold text-primary text-sm">Safia Empowerment</p>
               <p className="text-xs text-gray-500">Foundation</p>
             </div>
           </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-green-800 transition-colors"
+                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setProgramsOpen(!programsOpen)}
-                className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-green-800 transition-colors"
+                className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Programs <ChevronDown className="w-4 h-4" />
               </button>
@@ -66,7 +66,7 @@ export default function Navbar() {
                       key={p.href}
                       href={p.href}
                       onClick={() => setProgramsOpen(false)}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-800"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-subtle hover:text-primary"
                     >
                       {p.label}
                     </Link>
@@ -80,14 +80,14 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/donate"
-              className="hidden sm:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
             >
               <Heart className="w-4 h-4" fill="white" />
               Donate Now
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-md text-gray-600 hover:text-green-800 hover:bg-gray-100"
+              className="md:hidden p-2 rounded-md text-gray-600 hover:text-primary hover:bg-gray-100"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -101,7 +101,7 @@ export default function Navbar() {
             <Link
               href="/donate"
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2 bg-amber-500 text-white font-semibold px-4 py-3 rounded-lg mb-3"
+              className="flex items-center gap-2 bg-accent text-white font-semibold px-4 py-3 rounded-lg mb-3"
             >
               <Heart className="w-4 h-4" fill="white" /> Donate Now
             </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-800 rounded-md"
+                className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-primary-subtle hover:text-primary rounded-md"
               >
                 {link.label}
               </Link>
@@ -122,7 +122,7 @@ export default function Navbar() {
                   key={p.href}
                   href={p.href}
                   onClick={() => setIsOpen(false)}
-                  className="block py-2 text-sm text-gray-600 hover:text-green-800"
+                  className="block py-2 text-sm text-gray-600 hover:text-primary"
                 >
                   {p.label}
                 </Link>

@@ -27,7 +27,7 @@ export default async function NewsPreview() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Latest from the Field</h2>
             <p className="text-gray-500 mt-2">Stories, updates, and impact from our teams on the ground.</p>
           </div>
-          <Link href="/news" className="hidden sm:flex items-center gap-1 text-green-700 font-semibold hover:gap-2 transition-all text-sm">
+          <Link href="/news" className="hidden sm:flex items-center gap-1 text-primary-dark font-semibold hover:gap-2 transition-all text-sm">
             View All <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -47,7 +47,7 @@ export default async function NewsPreview() {
               )}
               <div className="p-5">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-semibold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-semibold text-accent-dark bg-accent-subtle px-2 py-0.5 rounded-full">
                     {categoryLabels[post.category] ?? post.category}
                   </span>
                   <span className="flex items-center gap-1 text-xs text-gray-400">
@@ -57,13 +57,13 @@ export default async function NewsPreview() {
                     })}
                   </span>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-green-800 transition-colors line-clamp-2">
+                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                   {post.title}
                 </h3>
                 <p className="text-sm text-gray-500 line-clamp-3 mb-4">{post.excerpt}</p>
                 <Link
                   href={`/news/${post.slug.current}`}
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-green-700 hover:gap-2 transition-all"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-primary-dark hover:gap-2 transition-all"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -73,7 +73,7 @@ export default async function NewsPreview() {
         </div>
 
         <div className="mt-8 text-center sm:hidden">
-          <Link href="/news" className="inline-flex items-center gap-1 text-green-700 font-semibold">
+          <Link href="/news" className="inline-flex items-center gap-1 text-primary-dark font-semibold">
             View All News <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

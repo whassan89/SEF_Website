@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 }
 
 const fundUsage = [
-  { label: 'Food Distribution', percent: 45, color: 'bg-green-500' },
+  { label: 'Food Distribution', percent: 45, color: 'bg-primary-medium' },
   { label: 'Clothing Drive', percent: 20, color: 'bg-blue-500' },
   { label: 'Medical Aid', percent: 20, color: 'bg-red-500' },
-  { label: 'Livelihood Programs', percent: 10, color: 'bg-amber-500' },
+  { label: 'Livelihood Programs', percent: 10, color: 'bg-accent' },
   { label: 'Operations', percent: 5, color: 'bg-gray-400' },
 ]
 
@@ -30,8 +30,8 @@ export default function TransparencyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="Legal Registrations" subtitle="SEF is fully licensed and legally accountable." />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-green-50 rounded-2xl p-8 border border-green-100">
-              <Award className="w-10 h-10 text-green-700 mb-4" />
+            <div className="bg-primary-subtle rounded-2xl p-8 border border-primary-muted">
+              <Award className="w-10 h-10 text-primary-dark mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">SECP License</h3>
               <dl className="space-y-2 text-sm">
                 {[
@@ -47,8 +47,8 @@ export default function TransparencyPage() {
                 ))}
               </dl>
             </div>
-            <div className="bg-amber-50 rounded-2xl p-8 border border-amber-100">
-              <Shield className="w-10 h-10 text-amber-600 mb-4" />
+            <div className="bg-accent-subtle rounded-2xl p-8 border border-accent-muted">
+              <Shield className="w-10 h-10 text-accent-dark mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Punjab Charity Commission</h3>
               <dl className="space-y-2 text-sm">
                 {[
@@ -78,7 +78,7 @@ export default function TransparencyPage() {
           />
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-2xl p-8 border border-gray-200 mb-6">
-              <PieChart className="w-8 h-8 text-green-700 mb-4" />
+              <PieChart className="w-8 h-8 text-primary-dark mb-4" />
               <div className="space-y-4">
                 {fundUsage.map(({ label, percent, color }) => (
                   <div key={label}>
@@ -112,7 +112,7 @@ export default function TransparencyPage() {
                 Our first annual report is being prepared and will be published here once complete.
                 SEF was licensed in April 2025 and this will be our inaugural report.
               </p>
-              <span className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-block bg-accent-muted text-accent-deep text-xs font-semibold px-3 py-1 rounded-full">
                 Coming Soon
               </span>
             </div>

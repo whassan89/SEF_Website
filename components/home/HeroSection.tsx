@@ -3,9 +3,9 @@ import { Heart, Shield, Award } from 'lucide-react'
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-green-900">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary-deep">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-900 via-green-800 to-green-950 opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-deep via-primary to-primary-darker opacity-95" />
 
       {/* Pattern overlay */}
       <div
@@ -17,23 +17,23 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center text-white py-20">
         {/* Trust badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-green-100 mb-8 backdrop-blur-sm">
-          <Shield className="w-4 h-4 text-amber-400" />
+        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-primary-muted mb-8 backdrop-blur-sm">
+          <Shield className="w-4 h-4 text-accent-medium" />
           SECP Licensed · Punjab Charity Commission Registered
         </div>
 
         {/* Main heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
           Empowering Lives,{' '}
-          <span className="text-amber-400">Restoring Dignity</span>
+          <span className="text-accent-medium">Restoring Dignity</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-green-100 max-w-2xl mx-auto mb-4">
+        <p className="text-lg sm:text-xl text-primary-muted max-w-2xl mx-auto mb-4">
           Providing food, clothing, and medical help to homeless individuals
           across Punjab — and empowering them toward self-sufficiency.
         </p>
 
-        <p className="text-sm text-green-300 mb-10">
+        <p className="text-sm text-primary-light mb-10">
           Operating across Lahore and multiple cities in Punjab, Pakistan.
         </p>
 
@@ -41,7 +41,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <Link
             href="/donate"
-            className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-amber-500/30 w-full sm:w-auto justify-center"
+            className="flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-accent/30 w-full sm:w-auto justify-center"
           >
             <Heart className="w-5 h-5" fill="white" />
             Donate Now
@@ -57,16 +57,16 @@ export default function HeroSection() {
         {/* License badges */}
         <div className="flex flex-wrap items-center justify-center gap-4">
           <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 border border-white/10">
-            <Award className="w-4 h-4 text-amber-400" />
+            <Award className="w-4 h-4 text-accent-medium" />
             <div className="text-left">
-              <p className="text-xs text-green-300">Licensed by</p>
+              <p className="text-xs text-primary-light">Licensed by</p>
               <p className="text-xs font-semibold text-white">SECP · Section 42</p>
             </div>
           </div>
           <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 border border-white/10">
-            <Award className="w-4 h-4 text-amber-400" />
+            <Award className="w-4 h-4 text-accent-medium" />
             <div className="text-left">
-              <p className="text-xs text-green-300">Registered with</p>
+              <p className="text-xs text-primary-light">Registered with</p>
               <p className="text-xs font-semibold text-white">Punjab Charity Commission</p>
             </div>
           </div>

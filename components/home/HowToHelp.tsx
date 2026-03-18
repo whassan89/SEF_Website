@@ -4,25 +4,25 @@ import { Heart, Users, Share2 } from 'lucide-react'
 const ways = [
   {
     icon: Heart,
-    iconColor: 'text-amber-500',
-    bg: 'bg-amber-50',
+    iconColor: 'text-accent',
+    bg: 'bg-accent-subtle',
     title: 'Donate',
     description:
       'Your donation directly funds food, clothing, and medical aid. Even Rs. 500 feeds a family for a day.',
     cta: 'Donate Now',
     href: '/donate',
-    ctaStyle: 'bg-amber-500 hover:bg-amber-600 text-white',
+    ctaStyle: 'bg-accent hover:bg-accent-dark text-white',
   },
   {
     icon: Users,
-    iconColor: 'text-green-600',
-    bg: 'bg-green-50',
+    iconColor: 'text-primary-medium',
+    bg: 'bg-primary-subtle',
     title: 'Volunteer',
     description:
       'Join our team on distribution days, or contribute your professional skills — legal, medical, or administrative.',
     cta: 'Get Involved',
     href: '/volunteer',
-    ctaStyle: 'bg-green-800 hover:bg-green-900 text-white',
+    ctaStyle: 'bg-primary hover:bg-primary-deep text-white',
   },
   {
     icon: Share2,

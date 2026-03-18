@@ -74,7 +74,7 @@ export default function MedicalAidPage() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/donate" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-xl transition-colors">
+            <Link href="/donate" className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-8 py-3 rounded-xl transition-colors">
               <Heart className="w-5 h-5" fill="white" /> Donate Now
             </Link>
             <Link href="/volunteer" className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors">

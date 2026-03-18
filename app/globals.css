@@ -8,10 +8,31 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #1B5E20;
-  --color-primary-dark: #145214;
-  --color-accent: #F59E0B;
-  --color-accent-dark: #D97706;
+
+  /* Original Colours */
+  /* --color-primary: #1B5E20; */
+  /* --color-primary-dark: #145214; */
+  /* --color-accent: #F59E0B; */
+  /* --color-accent-dark: #D97706; */
+
+  /* 1st Theme */
+  --color-primary: #537D96;
+  --color-primary-dark: #44A194;
+  --color-primary-deep: #3A6070;
+  --color-primary-darker: #2A4A5C;
+  --color-primary-medium: #6A9DB5;
+  --color-primary-light: #A8CAD8;
+  --color-primary-pale: #C8DDE8;
+  --color-primary-muted: #E0EEF4;
+  --color-primary-subtle: #F0F6F9;
+  --color-accent: #EC8F8D;
+  --color-accent-dark: #D97070;
+  --color-accent-medium: #F2ADAB;
+  --color-accent-deep: #D07070;
+  --color-accent-deeper: #C05E5C;
+  --color-accent-light: #FAE0DF;
+  --color-accent-muted: #FDF0EF;
+  --color-accent-subtle: #FEF8F8;
 }
 
 html {

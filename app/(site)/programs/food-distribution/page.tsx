@@ -27,8 +27,8 @@ export default function FoodDistributionPage() {
               { icon: MapPin, label: 'Locations', value: 'Lahore & surrounding Punjab cities' },
               { icon: Users, label: 'Beneficiaries', value: 'Homeless individuals & poor families' },
             ].map(({ icon: Icon, label, value }) => (
-              <div key={label} className="flex gap-4 bg-green-50 rounded-xl p-5">
-                <Icon className="w-8 h-8 text-green-700 flex-shrink-0 mt-0.5" />
+              <div key={label} className="flex gap-4 bg-primary-subtle rounded-xl p-5">
+                <Icon className="w-8 h-8 text-primary-dark flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{label}</p>
                   <p className="font-semibold text-gray-900 mt-0.5">{value}</p>
@@ -59,7 +59,7 @@ export default function FoodDistributionPage() {
       </section>
 
       {/* How to Help */}
-      <section className="py-16 bg-amber-50 border-t border-amber-100">
+      <section className="py-16 bg-accent-subtle border-t border-accent-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="How You Can Help" subtitle="Every contribution — big or small — feeds real people." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
@@ -68,17 +68,17 @@ export default function FoodDistributionPage() {
               { amount: 'Rs. 2,500', desc: 'Feeds a family for a week' },
               { amount: 'Rs. 10,000', desc: 'Sponsors a distribution event' },
             ].map(({ amount, desc }) => (
-              <div key={amount} className="bg-white rounded-xl p-5 text-center border border-amber-200">
-                <p className="text-2xl font-bold text-green-800">{amount}</p>
+              <div key={amount} className="bg-white rounded-xl p-5 text-center border border-accent-light">
+                <p className="text-2xl font-bold text-primary">{amount}</p>
                 <p className="text-sm text-gray-500 mt-1">{desc}</p>
               </div>
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/donate" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-xl transition-colors">
+            <Link href="/donate" className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-8 py-3 rounded-xl transition-colors">
               <Heart className="w-5 h-5" fill="white" /> Donate Now
             </Link>
-            <Link href="/volunteer" className="inline-flex items-center justify-center gap-2 bg-green-800 hover:bg-green-900 text-white font-semibold px-8 py-3 rounded-xl transition-colors">
+            <Link href="/volunteer" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-deep text-white font-semibold px-8 py-3 rounded-xl transition-colors">
               <Users className="w-5 h-5" /> Volunteer with Us
             </Link>
           </div>
