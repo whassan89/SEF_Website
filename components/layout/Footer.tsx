@@ -35,13 +35,13 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
+            <div className="mb-4 inline-block bg-white rounded-lg px-3 py-2">
               <Image
                 src="/images/SEF1.png"
                 alt="Safia Empowerment Foundation"
                 width={140}
                 height={48}
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-10 w-auto object-contain"
               />
             </div>
             <p className="text-primary-pale text-sm leading-relaxed mb-4">
