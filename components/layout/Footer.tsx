@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Heart, Youtube, Linkedin, Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react'
+import Image from 'next/image'
+import { Youtube, Linkedin, Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react'
 
 const learnLinks = [
   { label: 'About SEF', href: '/about' },
@@ -34,14 +35,14 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
-                <Heart className="w-5 h-5 text-primary" fill="#1B5E20" />
-              </div>
-              <div>
-                <p className="font-bold text-white text-sm">Safia Empowerment</p>
-                <p className="text-xs text-primary-light">Foundation</p>
-              </div>
+            <div className="mb-4">
+              <Image
+                src="/images/SEF1.png"
+                alt="Safia Empowerment Foundation"
+                width={140}
+                height={48}
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-primary-pale text-sm leading-relaxed mb-4">
               Empowering lives and restoring dignity for homeless individuals across Punjab, Pakistan.
