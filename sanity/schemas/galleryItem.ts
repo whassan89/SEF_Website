@@ -64,10 +64,17 @@ export const galleryItem = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+      description: 'e.g. Wapda Town, Lahore — displayed in the video info panel',
+    }),
+    defineField({
       name: 'caption',
-      title: 'Caption',
+      title: 'Description (max 3 lines)',
       type: 'text',
-      rows: 2,
+      rows: 3,
+      description: 'Short description shown beside the video. Keep it to 3 lines.',
     }),
   ],
   preview: {

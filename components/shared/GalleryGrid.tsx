@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { X, Play } from 'lucide-react'
+import { X, Play, MapPin, Calendar, Target, FileText } from 'lucide-react'
 import { urlFor } from '@/sanity/lib/image'
 import type { GalleryItem } from '@/lib/types'
 
@@ -14,6 +14,20 @@ const CATEGORIES = [
   { value: 'livelihood', label: 'Livelihood' },
   { value: 'team', label: 'Team' },
 ]
+
+const CATEGORY_LABELS: Record<string, string> = {
+  food: 'Food Distribution',
+  clothing: 'Clothing Drive',
+  medical: 'Medical Aid',
+  livelihood: 'Livelihood Empowerment',
+  team: 'Team Activity',
+}
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-PK', {
+    day: 'numeric', month: 'long', year: 'numeric',
+  })
+}
 
 interface Props { items: GalleryItem[] }
 
@@ -72,36 +86,81 @@ export default function GalleryGrid({ items }: Props) {
         </>
       )}
 
-      {/* Video grid */}
+      {/* Video list — left video, right brief */}
       {videos.length > 0 && (
         <>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Videos</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Videos</h2>
+          <div className="space-y-6">
             {videos.map((item) => (
-              <div key={item._id} className="rounded-xl overflow-hidden border border-gray-200">
-                {item.videoUrl && (
-                  <div className="aspect-video bg-black">
-                    {item.videoUrl.includes('cdn.sanity.io') ? (
-                      <video
-                        src={item.videoUrl}
-                        controls
-                        preload="metadata"
-                        className="w-full h-full object-contain"
-                      />
-                    ) : (
-                      <iframe
-                        src={item.videoUrl.includes('youtube.com/watch') ? item.videoUrl.replace('watch?v=', 'embed/') : item.videoUrl}
-                        title={item.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      />
+              <div
+                key={item._id}
+                className="flex flex-col md:flex-row gap-0 rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm"
+              >
+                {/* Left — video player */}
+                <div className="md:w-3/5 bg-black flex-shrink-0">
+                  {item.videoUrl && (
+                    <div className="aspect-video w-full h-full">
+                      {item.videoUrl.includes('cdn.sanity.io') ? (
+                        <video
+                          src={item.videoUrl}
+                          controls
+                          preload="metadata"
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <iframe
+                          src={item.videoUrl.includes('youtube.com/watch') ? item.videoUrl.replace('watch?v=', 'embed/') : item.videoUrl}
+                          title={item.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        />
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Right — info brief */}
+                <div className="md:w-2/5 p-6 flex flex-col justify-center gap-4 bg-white">
+                  <h3 className="font-bold text-gray-900 text-base leading-snug">{item.title}</h3>
+
+                  <div className="space-y-3">
+                    {item.location && (
+                      <div className="flex items-start gap-2">
+                        <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Location</p>
+                          <p className="text-sm text-gray-700">{item.location}</p>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="flex items-start gap-2">
+                      <Calendar className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Date</p>
+                        <p className="text-sm text-gray-700">{formatDate(item.date)}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2">
+                      <Target className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Drive For</p>
+                        <p className="text-sm text-gray-700">{CATEGORY_LABELS[item.category] ?? item.category}</p>
+                      </div>
+                    </div>
+
+                    {item.caption && (
+                      <div className="flex items-start gap-2">
+                        <FileText className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Description</p>
+                          <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">{item.caption}</p>
+                        </div>
+                      </div>
                     )}
                   </div>
-                )}
-                <div className="p-3">
-                  <p className="font-semibold text-sm text-gray-900">{item.title}</p>
-                  {item.caption && <p className="text-xs text-gray-500 mt-0.5">{item.caption}</p>}
                 </div>
               </div>
             ))}

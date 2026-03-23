@@ -50,7 +50,7 @@ export async function getGalleryItems(category?: string): Promise<GalleryItem[]>
     ? `*[_type == "galleryItem" && category == $category]`
     : `*[_type == "galleryItem"]`
   return client.fetch(
-    `${filter} | order(date desc) { _id, title, mediaType, image, videoUrl, category, date, caption }`,
+    `${filter} | order(date desc) { _id, title, mediaType, image, videoUrl, category, date, location, caption }`,
     { category }
   )
 }

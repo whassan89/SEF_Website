@@ -41,6 +41,7 @@ export interface GalleryItem {
   videoUrl?: string
   category: 'food' | 'clothing' | 'medical' | 'livelihood' | 'team'
   date: string
+  location?: string
   caption?: string
 }
 
