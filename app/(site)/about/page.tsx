@@ -10,7 +10,7 @@ import { urlFor } from '@/sanity/lib/image'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Safia Empowerment Foundation — our mission, history, team, and legal registrations. Licensed by SECP and Punjab Charity Commission.',
+    'Learn about Safia Empowerment Foundation — our vision, mission, history, team, and legal registrations. Licensed by SECP and Punjab Charity Commission.',
 }
 
 const milestones = [
@@ -97,25 +97,37 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Vision & Mission */}
       <section id="mission" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle title="Mission & Vision" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-primary text-white rounded-2xl p-8">
-              <h3 className="text-xl font-bold mb-4 text-accent-medium">Our Mission</h3>
-              <p className="text-primary-muted leading-relaxed">
-                To provide immediate relief — food, clothing, and medical assistance — and long-term
-                empowerment through livelihood opportunities, to homeless individuals across Punjab, Pakistan.
-              </p>
-            </div>
-            <div className="bg-accent text-white rounded-2xl p-8">
-              <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-              <p className="text-accent-subtle leading-relaxed">
+          <SectionTitle title="Vision & Mission" />
+          <div className="max-w-4xl mx-auto space-y-8">
+
+            {/* Vision — centered, full-width, prominent */}
+            <div className="bg-accent text-white rounded-2xl p-10 text-center">
+              <h3 className="text-xl font-bold mb-4 tracking-wide uppercase text-accent-subtle">Our Vision</h3>
+              <p className="text-xl leading-relaxed font-medium">
                 A Punjab where no person lives without dignity, access to basic necessities, or the
                 opportunity to contribute meaningfully to society.
               </p>
             </div>
+
+            {/* Mission — below, full-width */}
+            <div className="bg-primary text-white rounded-2xl p-10">
+              <h3 className="text-xl font-bold mb-4 text-accent-medium tracking-wide uppercase">Our Mission</h3>
+              <p className="text-primary-muted leading-relaxed">
+                The Safia Empowerment Foundation is a humanitarian, non-profit organization dedicated to
+                uplifting underprivileged and vulnerable communities by ensuring access to life&apos;s most
+                essential needs. Guided by the principles of dignity, equity, and compassion, we work to
+                provide food, clean water, clothing, shelter, healthcare, education, and sustainable
+                livelihood opportunities to individuals and families facing hardship. Our programs are
+                designed to break cycles of poverty, strengthen community resilience, and empower people
+                to build independent, confident, and self-reliant futures. We serve without discrimination
+                of caste, creed, gender, or religion — believing that every human being deserves the
+                opportunity to live with dignity and hope.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
