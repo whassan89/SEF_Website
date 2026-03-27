@@ -9,11 +9,11 @@ export const galleryItem = defineType({
     defineField({
       name: 'serialNumber',
       title: 'Serial Number',
-      type: 'number',
-      description: 'Auto-assigned unique tracking number. Do not edit manually.',
+      type: 'string',
+      description: 'Auto-assigned unique tracking number (e.g. SEF-2026-001). Do not edit manually.',
       readOnly: true,
       components: { input: AutoSerialNumberInput },
-      validation: (Rule) => Rule.required().integer().positive(),
+      validation: (Rule) => Rule.required().regex(/^SEF-\d{4}-\d{3}$/, { name: 'SEF format', invert: false }),
     }),
     defineField({
       name: 'title',

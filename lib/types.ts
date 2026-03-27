@@ -35,7 +35,7 @@ export interface BlogPost {
 export interface GalleryItem {
   _id: string
   _type: 'galleryItem'
-  serialNumber?: number
+  serialNumber?: string
   title: string
   mediaType: 'photo' | 'video'
   image?: SanityImage
