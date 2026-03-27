@@ -1,10 +1,20 @@
 import { defineField, defineType } from 'sanity'
+import { AutoSerialNumberInput } from '../actions/autoSerialNumber'
 
 export const galleryItem = defineType({
   name: 'galleryItem',
   title: 'Gallery Item',
   type: 'document',
   fields: [
+    defineField({
+      name: 'serialNumber',
+      title: 'Serial Number',
+      type: 'number',
+      description: 'Auto-assigned unique tracking number. Do not edit manually.',
+      readOnly: true,
+      components: { input: AutoSerialNumberInput },
+      validation: (Rule) => Rule.required().integer().positive(),
+    }),
     defineField({
       name: 'title',
       title: 'Title',
@@ -82,6 +92,14 @@ export const galleryItem = defineType({
       title: 'title',
       media: 'image',
       subtitle: 'category',
+      serial: 'serialNumber',
+    },
+    prepare({ title, media, subtitle, serial }) {
+      return {
+        title: serial ? `#${serial} — ${title}` : title,
+        media,
+        subtitle,
+      }
     },
   },
   orderings: [

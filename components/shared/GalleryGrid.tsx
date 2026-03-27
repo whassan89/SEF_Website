@@ -122,6 +122,11 @@ export default function GalleryGrid({ items }: Props) {
 
                 {/* Right — info brief */}
                 <div className="md:w-2/5 p-6 flex flex-col justify-center gap-4 bg-white">
+                  {item.serialNumber && (
+                    <span className="inline-block text-xs font-bold text-primary bg-primary-subtle px-2 py-0.5 rounded w-fit">
+                      #{item.serialNumber}
+                    </span>
+                  )}
                   <h3 className="font-bold text-gray-900 text-base leading-snug">{item.title}</h3>
 
                   <div className="space-y-3">
