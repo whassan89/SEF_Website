@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
@@ -36,7 +36,7 @@ export default function Navbar() {
               alt="Safia Empowerment Foundation"
               width={140}
               height={48}
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>
