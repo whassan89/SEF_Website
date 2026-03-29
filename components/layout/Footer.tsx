@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-4 inline-block bg-white rounded-lg px-3 py-2">
               <Image
-                src="/images/SEF1.png"
+                src="/images/SEF-logo1.jpeg"
                 alt="Safia Empowerment Foundation"
                 width={140}
                 height={48}

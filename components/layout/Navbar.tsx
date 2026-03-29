@@ -32,7 +32,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="/images/SEF1.png"
+              src="/images/SEF-logo1.jpeg"
               alt="Safia Empowerment Foundation"
               width={140}
               height={48}
