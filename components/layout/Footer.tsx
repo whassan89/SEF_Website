@@ -50,7 +50,7 @@ export default function Footer() {
                 alt="Safia Empowerment Foundation"
                 width={140}
                 height={48}
-                className="h-10 w-auto object-contain"
+                className="h-[72px] w-auto object-contain"
               />
             </div>
             <p className="text-primary-pale text-sm leading-relaxed mb-4">
