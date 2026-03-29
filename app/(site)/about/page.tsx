@@ -116,15 +116,9 @@ export default async function AboutPage() {
             <div className="bg-primary text-white rounded-2xl p-10">
               <h3 className="text-xl font-bold mb-4 text-accent-medium tracking-wide uppercase">Our Mission</h3>
               <p className="text-primary-muted leading-relaxed">
-                The Safia Empowerment Foundation is a humanitarian, non-profit organization dedicated to
-                uplifting underprivileged and vulnerable communities by ensuring access to life&apos;s most
-                essential needs. Guided by the principles of dignity, equity, and compassion, we work to
-                provide food, clean water, clothing, shelter, healthcare, education, and sustainable
-                livelihood opportunities to individuals and families facing hardship. Our programs are
-                designed to break cycles of poverty, strengthen community resilience, and empower people
-                to build independent, confident, and self-reliant futures. We serve without discrimination
-                of caste, creed, gender, or religion — believing that every human being deserves the
-                opportunity to live with dignity and hope.
+                To uplift underprivileged communities by providing essential needs, accessible healthcare,
+                quality education, and sustainable livelihood opportunities — enabling dignity, equality,
+                and self-reliance.
               </p>
             </div>
 
