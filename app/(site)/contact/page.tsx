@@ -50,12 +50,18 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Map placeholder */}
-              <div className="rounded-2xl overflow-hidden border border-gray-200 h-56 bg-primary-subtle flex items-center justify-center text-gray-400">
-                <div className="text-center">
-                  <MapPin className="w-10 h-10 mx-auto mb-2 text-primary-light" />
-                  <p className="text-sm">Map embed — add Google Maps API key</p>
-                </div>
+              {/* Google Maps Embed */}
+              <div className="rounded-2xl overflow-hidden border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850.9402996138542!2d74.28144056960218!3d31.44824054250298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391901d1815d6659%3A0xf2df90e79e0dacd2!2sAl-Rehman%20Arcade!5e0!3m2!1sen!2s!4v1774776416392!5m2!1sen!2s"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="SEF Office Location"
+                />
               </div>
             </div>
 
