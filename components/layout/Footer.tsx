@@ -1,6 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Youtube, Linkedin, Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react'
+import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react'
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z" />
+    </svg>
+  )
+}
 
 const learnLinks = [
   { label: 'About SEF', href: '/about' },
@@ -20,10 +28,11 @@ const companyLinks = [
 ]
 
 const socialLinks = [
-  { label: 'YouTube', href: 'https://youtube.com/@sefngo', icon: Youtube },
-  { label: 'Facebook', href: 'https://facebook.com/sefngo', icon: Facebook },
-  { label: 'Instagram', href: 'https://instagram.com/sefngo', icon: Instagram },
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/sefngo', icon: Linkedin },
+  // { label: 'YouTube', href: 'https://youtube.com/@sefngo', icon: Youtube },
+  { label: 'Facebook', href: 'https://www.facebook.com/share/1P5j7JNFQU/?mibextid=wwXIfr', icon: Facebook },
+  { label: 'Instagram', href: 'https://www.instagram.com/sefhumanityfirst', icon: Instagram },
+  // { label: 'LinkedIn', href: 'https://linkedin.com/company/sefngo', icon: Linkedin },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@sefhumanityfirst', icon: TikTokIcon },
 ]
 
 export default function Footer() {
