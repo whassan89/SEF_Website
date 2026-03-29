@@ -107,8 +107,8 @@ export default async function AboutPage() {
             <div className="bg-accent text-white rounded-2xl p-10 text-center">
               <h3 className="text-xl font-bold mb-4 tracking-wide uppercase text-accent-subtle">Our Vision</h3>
               <p className="text-xl leading-relaxed font-medium">
-                A Punjab where no person lives without dignity, access to basic necessities, or the
-                opportunity to contribute meaningfully to society.
+                A world where every individual, regardless of background, has access to basic necessities,
+                equal opportunities, and the ability to live a life of dignity and independence.
               </p>
             </div>
 
